@@ -1,0 +1,64 @@
+---
+import DotNetIcon from "./back/DotNetIcon.astro"
+import AngularIcon from "./front/AngularIcon.astro"
+import SqlServerIcon from "./back/SqlServerIcon.astro"
+import AzureIcon from "./devops/AzureIcon.astro"
+import MongoDB from "./back/MongoDB.astro"
+import TailwindcssIcon from "./front/TailwindcssIcon.astro"
+import BootstrapIcon from "./front/BootstrapIcon.astro"
+import AngularMaterialIcon from "./front/AngularMaterialIcon.astro"
+import RxjsIcon from "./front/RxjsIcon.astro"
+import NodejsIcon from "./back/NodejsIcon.astro"
+import DockerIcon from "./devops/DockerIcon.astro"
+import FirebaseIcon from "./devops/FirebaseIcon.astro"
+import FlutterIcon from "./learning/FlutterIcon.astro"
+import AstroIcon from "./learning/AstroIcon.astro"
+import SvelteIcon from "./learning/SvelteIcon.astro"
+import KubernetesIcon from "./learning/KubernetesIcon.astro"
+import SupabaseIcon from "./learning/SupabaseIcon.astro"
+import GitHubIcon from "./devops/GitHubIcon.astro"
+---
+
+<div id="aboutme" class="w-dvw h-dvh mt-5 bg-gray-200 dark:bg-gray-800 dark:text-white">
+    <h2 class="text-center text-lg pb-5">This is my tech stack. I'm always looking for new technologies and learning.</h2>
+    <div class="grid grid-cols-2 gap-x-2 gap-y-10">
+        <div class="w-full flex items-center flex-col">
+            <h3 class="pb-3">Frontend</h3>
+            <div class="grid grid-cols-2 gap-5">
+                <AngularIcon />
+                <AngularMaterialIcon />
+                <RxjsIcon />
+                <TailwindcssIcon />
+                <BootstrapIcon />
+            </div>
+        </div>
+        <div class="w-full flex items-center flex-col">
+            <h3 class="pb-3">Backend</h3>
+            <div class="grid grid-cols-2 gap-5">
+                <DotNetIcon />
+                <SqlServerIcon />
+                <MongoDB />
+                <NodejsIcon />
+            </div>
+        </div>
+        <div class="w-full flex items-center flex-col">
+            <h3 class="pb-3">DevOps</h3>
+            <div class="grid grid-cols-2 gap-5">
+                <AzureIcon />
+                <DockerIcon />
+                <FirebaseIcon />
+                <GitHubIcon /> 
+            </div>
+        </div>
+        <div class="w-full flex items-center flex-col">
+            <h3 class="pb-3">Learning</h3>
+            <div class="grid grid-cols-2 gap-5">
+                <KubernetesIcon />
+                <FlutterIcon />
+                <SupabaseIcon />
+                <AstroIcon />
+                <SvelteIcon />
+            </div>
+        </div>
+    </div>
+</div>

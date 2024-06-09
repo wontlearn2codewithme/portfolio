@@ -1,9 +1,10 @@
 ---
-const props = Astro.props
+const props = Astro.props;
 ---
+
 <div
     id="presentation"
-    class="w-dvw h-dvh bg-no-repeat bg-cover bg-center flex flex-col md:flex-row"
+    class="w-dvw h-svh bg-no-repeat bg-cover bg-center flex flex-col md:flex-row"
 >
     <header
         class="transition-opacity ease-in-out delay-500 opacity-100 bg-opacity-55 bg-gray-200 mt-10 w-fit px-10"
@@ -12,9 +13,16 @@ const props = Astro.props
         <h2 class="font-league-spartan text-3xl">
             Fullstack software developer
         </h2>
+        <main>
+            <article>
+                I'm a spanish software developer with 7 years of experience in
+                the .NET framework and Angular. Always passionate and learning
+                new technologies.
+            </article>
+        </main>
     </header>
     <a
-        href="#aboutme"
+        href="#experience"
         class="absolute bottom-0 left-1/2 text-4xl text-white animate-bounce scroll-smooth"
     >
         <svg
@@ -83,7 +91,7 @@ const props = Astro.props
     </a>
 </div>
 <style>
-	#presentation {
-		background-image: url("../images/yoenoslo.jpg");
-	}
+    #presentation {
+        background-image: url("../../images/yoenoslo.jpg");
+    }
 </style>

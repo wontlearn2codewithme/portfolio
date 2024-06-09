@@ -1,8 +1,9 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-import Presentation from "../components/Presentation.astro";
+import Navigation from "../components/navigation/Navigation.astro";
+import Presentation from "../components/presentation/Presentation.astro";
 import Technologies from "../components/Technologies/Technologies.astro";
+import Experience from "../components/experience/Experience.astro";
+import Projects from "../components/projects/Projects.astro";
 ---
 
 <html lang="es">
@@ -36,7 +37,8 @@ import Technologies from "../components/Technologies/Technologies.astro";
 	<body class="font-poppins bg-gray-200 dark:bg-gray-800 text-sm lg:text-lg md:text-base">
 		<Navigation />
 		<Presentation />
+		<Experience />
 		<Technologies />
+		<Projects />
 	</body>
-	<Footer />
 </html>

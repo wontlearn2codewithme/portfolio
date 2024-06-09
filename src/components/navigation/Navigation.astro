@@ -1,11 +1,19 @@
 ---
+import GitHubAnimatedIcon from "./GitHubAnimatedIcon.astro";
+import LinkedinIcon from "./LinkedinIcon.astro";
 ---
 
-<div class="sticky top-0 bg-gray-300 dark:bg-gray-800 dark:text-white flex justify-between py-2">
-    <div class="w-1/2 md:w-1/3 flex justify-around items-center">
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
+<div
+    id="header"
+    class="sticky top-0 bg-gray-200 dark:bg-gray-800 dark:text-white flex justify-between py-2"
+>
+    <div class="w-1/3 flex justify-around items-center">
+        <a href="https://www.linkedin.com/in/victor-garcia-exposito-7b1109111/"
+            ><LinkedinIcon /></a
+        >
+        <a href="https://github.com/wontlearn2codewithme"
+            ><GitHubAnimatedIcon /></a
+        >
     </div>
     <button
         id="theme-toggle"
@@ -37,7 +45,9 @@
 </div>
 <script is:inline>
     var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-    var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+    var themeToggleLightIcon = document.getElementById(
+        "theme-toggle-light-icon",
+    );
 
     // Change the icons inside the button based on previous settings
     if (
@@ -79,4 +89,23 @@
             }
         }
     });
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+            header.classList.add("header-hidden");
+        } else {
+            header.classList.remove("header-hidden");
+        }
+        lastScrollY = window.scrollY;
+    });
 </script>
+<style>
+    .header {
+        transition: transform 0.5s ease-in-out;
+    }
+    .header-hidden {
+        transform: translateY(-100%);
+    }
+</style>

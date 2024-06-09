@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import dingus from "../../images/Dingus.png";
+import logitravel from "../../images/Logitravel.png";
+import nttdata from "../../images/nttdata-logo.png";
+import gosupply from "../../images/gosupply.png";
+---
+
+<div
+    id="experience"
+    class="w-dvw px-4 mt-10 bg-gray-200 dark:bg-gray-800 dark:text-white"
+>
+    <h2 class="mb-5 text-center text-lg pb-5">This is my work experience.</h2>
+    <div class="grid grid-cols-2 gap-y-10 gap-x-3">
+        <Image
+            role="button"
+            id="gosupplyicon"
+            class="self-center justify-self-center cursor-pointer"
+            src={gosupply}
+            alt="GoSupply logo"
+        />
+        <div>
+            <h3
+                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+            >
+                Full stack software developer
+            </h3>
+            <p>
+                Thanks to my experience in .NET technologies, I'm currently
+                working for GoSupply, migrating old legacy code and applying
+                best practices within the developing team.
+            </p>
+        </div>
+        <Image
+            role="button"
+            id="nttdatalogo"
+            class="self-center justify-self-center cursor-pointer"
+            src={nttdata}
+            alt="NttData logo"
+        />
+        <div>
+            <h3
+                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+            >
+                Application Analyst
+            </h3>
+            <p>
+                As an application analyst, I worked closely with clients to
+                develop the best applications for their needs using the latest
+                technologies and methodologies of the .NET framework.
+            </p>
+        </div>
+        <Image
+            role="button"
+            id="logilogo"
+            class="self-center justify-self-center cursor-pointer"
+            src={logitravel}
+            alt="Logitravel logo"
+        />
+        <div>
+            <h3
+                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+            >
+                Full stack software developer
+            </h3>
+            <p>
+                During my two years working at Logitravel, I participated in the
+                integrations of tour operators and our own systems in the travel
+                package sector.
+            </p>
+        </div>
+        <Image
+            role="button"
+            id="dinguslogo"
+            class="self-center justify-self-center cursor-pointer"
+            src={dingus}
+            alt="Dingus logo"
+        />
+        <div>
+            <h3
+                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+            >
+                Backend software developer
+            </h3>
+            <p>
+                At Dingus, I collaborated for two years in the maintenance of
+                hotel management software and developed integrations with
+                various bed banks and tour operators such as Booking, Expedia,
+                and Hotelbeds.
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    // Encuentra nuestro componente en la página.
+    const gsIcon = document.getElementById("gosupplyicon");
+    gsIcon.addEventListener("click", () => {
+        const win = window.open("https://www.mygosupply.com/", "_blank");
+        win.focus();
+    });
+    const nttLogo = document.getElementById("nttdatalogo");
+    nttLogo.addEventListener("click", () => {
+        const win = window.open("https://es.nttdata.com/", "_blank");
+        win.focus();
+    });
+    const logilogo = document.getElementById("logilogo");
+    logilogo.addEventListener("click", () => {
+        const win = window.open("https://www.logitravel.com/viajes/", "_blank");
+        win.focus();
+    });
+    const dinguslogo = document.getElementById("dinguslogo");
+    dinguslogo.addEventListener("click", () => {
+        const win = window.open("https://www.dingus.es/en/", "_blank");
+        win.focus();
+    });
+</script>

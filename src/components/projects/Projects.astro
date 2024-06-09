@@ -9,50 +9,46 @@ import FlutterIcon from "../Technologies/learning/FlutterIcon.astro";
 import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
 ---
 
-<div class="w-dvw p-5 mt-5 bg-gray-200 dark:bg-gray-800 dark:text-white">
+<div class="w-dvw p-4 mt-5 bg-gray-200 dark:bg-gray-800 dark:text-white">
     <h2 class="mb-5 text-center text-lg pb-5">
         These are the projects I'm currently working on.
     </h2>
-    <div class="grid grid-cols-2 md:grid-cols-grid-1-2 gap-x-3 gap-y-14">
+    <div
+        class="lg:px-5 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-grid-1-2 gap-x-3 gap-y-14"
+    >
         <div class="flex flex-col">
             <Image
+            role="button"
+            id="astrocytes"
                 src={theastrocytesadventures}
                 alt="The astrocytes adventures"
                 class="rounded-md"
             />
+        </div>
+        <div>
+            <h3 class="text-center text-lg font-bold">
+                The astrocytes adventures
+            </h3>
+            <p>
+                A project I made for my girlfriend when she lived in Japan and I
+                lived in Spain. We can upload pictures and classify them by tags
+                so we can check them later, like an album! This way, we could
+                share the moments we spent together in Spain and also preserve
+                the new adventures we have in Belgium. She's doing her PhD in
+                neuroscience, researching astrocytes, thus the name of the
+                project.
+            </p>
             <div>
                 <h3 class="text-center my-3">Technologies used</h3>
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                     <AngularIcon />
                     <AngularMaterialIcon />
                     <FirebaseIcon />
                 </div>
             </div>
         </div>
-        <div>
-            <h3 class="text-center text-lg font-bold">
-                The astrocytes adventures 🚧
-            </h3>
-            <p>
-                (Currently working on it) A project I made for my girlfriend
-                when she lived in Japan and I lived in Spain. We can upload
-                pictures and classify them by tags so we can check them later,
-                like an album! This way, we could share the moments we spent
-                together in Spain and also preserve the new adventures we have
-                in Belgium. She's doing her PhD in neuroscience, researching
-                astrocytes, thus the name of the project.
-            </p>
-        </div>
         <div class="flex flex-col">
             <Image src={readin} alt="Readin" class="rounded-md" />
-            <div>
-                <h3 class="text-center my-3">Technologies used</h3>
-                <div class="grid grid-cols-2 gap-3">
-                    <FlutterIcon />
-                    <SupabaseIcon />
-                    <FirebaseIcon />
-                </div>
-            </div>
         </div>
         <div>
             <h3 class="text-center text-lg font-bold">Readin 🚧</h3>
@@ -62,6 +58,21 @@ import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
                 also meet people or even organise events about it. It will be a
                 mobile app at first, I'm planning on building the web app after.
             </p>
+            <div>
+                <h3 class="text-center my-3">Technologies used</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <FlutterIcon />
+                    <SupabaseIcon />
+                    <FirebaseIcon />
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script is:inline>
+    const astrocytes = document.getElementById('astrocytes');
+    astrocytes.addEventListener('click', () => {
+        const win = window.open("https://the-astrocytes-adventures.web.app/", "_blank");
+        win.focus();
+    })
+</script>

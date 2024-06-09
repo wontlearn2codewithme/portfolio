@@ -1,11 +1,12 @@
 ---
+import CVIcon from "./CVIcon.astro";
 import GitHubAnimatedIcon from "./GitHubAnimatedIcon.astro";
 import LinkedinIcon from "./LinkedinIcon.astro";
 ---
 
 <div
     id="header"
-    class="sticky top-0 bg-gray-200 dark:bg-gray-800 dark:text-white flex justify-between py-2"
+    class="sticky top-0 bg-gray-300 dark:bg-gray-900 dark:text-white flex justify-between py-2"
 >
     <div class="w-1/3 flex justify-around items-center">
         <a href="https://www.linkedin.com/in/victor-garcia-exposito-7b1109111/"
@@ -13,6 +14,11 @@ import LinkedinIcon from "./LinkedinIcon.astro";
         >
         <a href="https://github.com/wontlearn2codewithme"
             ><GitHubAnimatedIcon /></a
+        >
+        <a
+            href="https://raw.githubusercontent.com/wontlearn2codewithme/portfolio/main/src/cv/GarciaExpositoVictorCV.pdf"
+            target="_blank"
+            download><CVIcon /></a
         >
     </div>
     <button

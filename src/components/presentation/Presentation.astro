@@ -1,27 +1,33 @@
 ---
 const props = Astro.props;
+import Image from "astro/components/Image.astro";
+import guitar from "../../images/IMG-20190915-WA0010.jpg";
+import denmark from "../../images/IMG-20231212-WA0062.jpg";
+import oslo from "../../images/yoenoslo2.jpg";
 ---
 
+<!-- Mobile and tablet -->
 <div
     id="presentation"
-    class="w-dvw md:h-auto md:pb-10 h-svh bg-no-repeat bg-cover bg-center flex flex-col md:flex-row"
+    class="lg:hidden w-dvw md:h-auto md:pb-10 h-svh bg-no-repeat bg-cover bg-center flex flex-col md:flex-row"
 >
     <header
         class="md:w-1/3 md:pb-5 bg-opacity-55 bg-gray-200 mt-10 w-fit px-10"
     >
         <h1 class="text-5xl pb-3">Victor Garcia Exposito</h1>
         <h2 class="font-league-spartan text-3xl">
-            Fullstack software developer
+            Full-Stack software developer
         </h2>
         <main>
             <article>
-                I'm a spanish software developer with 7 years of experience in
+                I'm a Spanish software developer with 7 years of experience in
                 the .NET framework and Angular. Always passionate and learning
-                new technologies.
+                new technologies. Moving to Leuven, Belgium.
             </article>
         </main>
     </header>
-    <a class="md:hidden"
+    <a
+        class="md:hidden"
         href="#experience"
         class="absolute bottom-0 left-1/2 text-4xl text-white animate-bounce scroll-smooth"
     >
@@ -90,8 +96,69 @@ const props = Astro.props;
         </svg>
     </a>
 </div>
+
+<!-- Web -->
+<div class="mx-8 gap-10 hidden dark:text-white lg:grid grid-cols-grid-1-2">
+    <main class="self-center text-gray-200 bg-gray-800 dark:bg-gray-200 dark:text-black p-3 rounded-md">
+        <h1 class="text-5xl pb-3">Victor Garcia Exposito</h1>
+        <h2 class="font-league-spartan text-3xl">
+            Full-Stack software developer
+        </h2>
+        <article>
+            I'm a Spanish software developer with 7 years of experience in the
+            .NET framework and Angular. I'm always passionate about learning new
+            technologies. But not everything is code! I also love to travel and
+            play guitar (I even had a band). The more adventures, the better!
+        </article>
+    </main>
+    <div class="flex flex-col w-10/12 mt-8">
+        <Image
+            class="move-right-left w-1/3 self-end rounded-lg"
+            src={guitar}
+            alt="Victor playing guitar"
+        />
+        <Image
+            class="move-left-right w-1/3 rounded-lg"
+            src={oslo}
+            alt="Victor in oslo"
+        />
+        <Image
+            class="move-right-left w-1/3 self-end rounded-lg"
+            src={denmark}
+            alt="Victor in denmark"
+        />
+    </div>
+</div>
 <style>
     #presentation {
         background-image: url("../../images/yoenoslo.jpg");
     }
+    @keyframes moveLeftRight {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+    }
+
+    .move-left-right {
+        animation: moveLeftRight 3s ease-in-out infinite;
+    }
+
+    @keyframes moveRightLeft {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+    }
+
+    .move-right-left {
+        animation: moveRightLeft 3s ease-in-out infinite;
+    }
+
 </style>

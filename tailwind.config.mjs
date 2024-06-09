@@ -8,6 +8,10 @@ export default {
 				'inter': ['"inter"', 'sans-serif'],
 				'poppins': ['"poppins"', 'sans-serif']
 			},
+			gridTemplateColumns: {
+				// Definir una nueva clase de cuadrícula personalizada
+				'grid-1-2': '1fr 2fr',
+			},
 		},
 	},
 	plugins: [],

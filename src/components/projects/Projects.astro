@@ -9,8 +9,10 @@ import FlutterIcon from "../Technologies/learning/FlutterIcon.astro";
 import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
 ---
 
-<div class="w-dvw p-4 mt-5 bg-gray-200 dark:bg-gray-800 dark:text-white lg:mt-60">
-    <h2 class="mb-5 text-center text-lg pb-5">
+<div
+    class="w-dvw p-4 mt-5 bg-gray-200 dark:bg-gray-800 dark:text-white lg:mt-60"
+>
+    <h2 class="mb-5 text-center text-lg pb-5 underline underline-offset-8">
         These are the projects I'm currently working on.
     </h2>
     <div
@@ -18,15 +20,15 @@ import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
     >
         <div class="flex flex-col">
             <Image
-            role="button"
-            id="astrocytes"
+                role="button"
+                id="astrocytes"
                 src={theastrocytesadventures}
                 alt="The astrocytes adventures"
                 class="rounded-md"
             />
         </div>
         <div>
-            <h3 class="text-center text-lg font-bold">
+            <h3 class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center">
                 The astrocytes adventures
             </h3>
             <p class="lg:pt-5">
@@ -51,12 +53,13 @@ import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
             <Image src={readin} alt="Readin" class="rounded-md" />
         </div>
         <div>
-            <h3 class="text-center text-lg font-bold">Readin 🚧</h3>
+            <h3 class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center">Readin 🚧</h3>
             <p class="lg:pt-5">
-                (Currently working on it) This project is a social network for
-                people who likes to read, want to share about their readings and
-                also meet people or even organise events about it. It will be a
-                mobile app at first, I'm planning on building the web app after.
+                (WIP) This project is a social network for people who likes to
+                read, want to share about their thoughts about literature or
+                culture in general and also want meet people or even organise
+                events about it. It will be a mobile app at first, and I'm
+                planning on building the web app afterwards.
             </p>
             <div>
                 <h3 class="text-center my-3">Technologies used</h3>
@@ -70,9 +73,12 @@ import SupabaseIcon from "../Technologies/learning/SupabaseIcon.astro";
     </div>
 </div>
 <script is:inline>
-    const astrocytes = document.getElementById('astrocytes');
-    astrocytes.addEventListener('click', () => {
-        const win = window.open("https://the-astrocytes-adventures.web.app/", "_blank");
+    const astrocytes = document.getElementById("astrocytes");
+    astrocytes.addEventListener("click", () => {
+        const win = window.open(
+            "https://the-astrocytes-adventures.web.app/",
+            "_blank",
+        );
         win.focus();
-    })
+    });
 </script>

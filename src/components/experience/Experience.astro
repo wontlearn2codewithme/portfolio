@@ -3,94 +3,137 @@ import { Image } from "astro:assets";
 import dingus from "../../images/Dingus.png";
 import logitravel from "../../images/Logitravel.png";
 import nttdata from "../../images/nttdata-logo.png";
-import gosupply from "../../images/gosupply.png";
+import gsblack from "../../images/gosupply_black.svg";
+import gswhite from "../../images/gosupply_white.svg";
+import strategies from "../../images/Logo-Innovation.png.webp";
 ---
 
 <div
     id="experience"
     class="w-dvw px-4 mt-14 bg-gray-200 dark:bg-gray-800 dark:text-white lg:mt-60"
 >
-    <h2 class="underline underline-offset-8 mb-5 text-center text-2xl pb-5">Work experience</h2>
+    <h2 class="underline underline-offset-8 mb-5 text-center text-2xl pb-5">
+        Work experience
+    </h2>
     <div
-        class="grid lg:px-5 lg:gap-10 lg:grid-cols-4 md:grid-cols-grid-1-2 grid-cols-2 gap-y-10 gap-x-3"
+        class="grid lg:px-5 lg:gap-10 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-y-10 gap-x-3"
     >
-        <Image
-            role="button"
-            id="gosupplyicon"
-            class="self-center justify-self-center cursor-pointer"
-            src={gosupply}
-            alt="GoSupply logo"
-        />
-        <div>
-            <h3
-                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
-            >
-                Full-Stack software developer
-            </h3>
-            <p class="lg:pt-5">
-                I'm currently working for GoSupply, colaborating in the design
-                of the systems architecture and applying the latest technologies
-                and best practices within the team.
-            </p>
+        <div
+            class="flex gap-4 md:col-span-2 md:w-1/2 md:self-center md:justify-self-center"
+        >
+            <Image
+                role="button"
+                id="gosupplyicon"
+                class="dark:hidden self-center justify-self-center w-1/2 cursor-pointer"
+                src={gsblack}
+                alt="GoSupply logo"
+            />
+            <Image
+                role="button"
+                id="gosupplyicon"
+                class="hidden dark:block self-center justify-self-center w-1/2 cursor-pointer"
+                src={gswhite}
+                alt="GoSupply logo"
+            />
+            <div class="w-1/2">
+                <h3
+                    class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+                >
+                    Full-Stack software developer
+                </h3>
+                <p class="lg:pt-5">
+                    I'm currently working for GoSupply, colaborating in the
+                    design of the systems architecture and applying the latest
+                    technologies and best practices within the team.
+                </p>
+            </div>
         </div>
-        <Image
-            role="button"
-            id="nttdatalogo"
-            class="self-center justify-self-center cursor-pointer"
-            src={nttdata}
-            alt="NttData logo"
-        />
-        <div>
-            <h3
-                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
-            >
-                Application Analyst
-            </h3>
-            <p class="lg:pt-5">
-                I worked closely with clients of the real state market to
-                develop the best applications for their needs using the latest
-                technologies and methodologies of .NET.
-            </p>
+        <div class="flex gap-4">
+            <Image
+                role="button"
+                id="nttdatalogo"
+                class="self-center w-1/2 justify-self-center cursor-pointer"
+                src={nttdata}
+                alt="NttData logo"
+            />
+            <div class="w-1/2">
+                <h3
+                    class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+                >
+                    Application Analyst
+                </h3>
+                <p class="lg:pt-5">
+                    I worked closely with clients of the real state market to
+                    develop the best applications for their needs using the
+                    latest technologies and methodologies of .NET.
+                </p>
+            </div>
         </div>
-        <Image
-            role="button"
-            id="logilogo"
-            class="self-center justify-self-center cursor-pointer"
-            src={logitravel}
-            alt="Logitravel logo"
-        />
-        <div>
-            <h3
-                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
-            >
-                Full-Stack software developer
-            </h3>
-            <p class="lg:pt-5">
-                During my two years working at Logitravel, I participated in the
-                integrations of tour operators and travel agencies, such as
-                Expedia or Booking, and also small travel agencies so they can
-                use the brand of Logitravel to sell their products.
-            </p>
+        <div class="flex gap-4">
+            <Image
+                role="button"
+                id="logilogo"
+                class="self-center w-1/2 justify-self-center cursor-pointer"
+                src={logitravel}
+                alt="Logitravel logo"
+            />
+            <div class="w-1/2">
+                <h3
+                    class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+                >
+                    Full-Stack software developer
+                </h3>
+                <p class="lg:pt-5">
+                    During my two years working at Logitravel, I participated in
+                    the integrations of tour operators and travel agencies, such
+                    as Expedia or Booking, and also small travel agencies so
+                    they can use the brand of Logitravel to sell their products.
+                </p>
+            </div>
         </div>
-        <Image
-            role="button"
-            id="dinguslogo"
-            class="self-center justify-self-center cursor-pointer"
-            src={dingus}
-            alt="Dingus logo"
-        />
-        <div>
-            <h3
-                class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
-            >
-                Backend software developer
-            </h3>
-            <p class="lg:pt-5">
-                At Dingus, I collaborated for two years in the maintenance of
-                hotel management software and developed integrations with
-                various bed banks and tour operators such as Booking, Expedia,
-                and Hotelbeds.
-            </p>
+        <div class="flex gap-4">
+            <Image
+                role="button"
+                id="dinguslogo"
+                class="self-center w-1/2 justify-self-center cursor-pointer"
+                src={dingus}
+                alt="Dingus logo"
+            />
+            <div class="w-1/2">
+                <h3
+                    class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+                >
+                    Backend software developer
+                </h3>
+                <p class="lg:pt-5">
+                    At Dingus, I collaborated for two years in the maintenance
+                    of hotel management software and developed integrations with
+                    various bed banks and tour operators such as Booking,
+                    Expedia, and Hotelbeds.
+                </p>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <Image
+                role="button"
+                id="strategieslogo"
+                class="self-center w-1/2 justify-self-center cursor-pointer"
+                src={strategies}
+                alt="Innovation Strategies logo"
+            />
+            <div class="w-1/2">
+                <h3
+                    class="p-2 mb-3 text-lg bg-gray-800 dark:text-black dark:bg-gray-200 bg-opacity-25 rounded-md text-center"
+                >
+                    Backend software developer
+                </h3>
+                <p class="lg:pt-5">
+                    I started my career in Innovation Strategies. Here I worked
+                    as a backend developer, migrating projects from .NET
+                    Framework to .NET Core and also migrating the old stored
+                    procedures to Entity Framework.
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -114,6 +157,11 @@ import gosupply from "../../images/gosupply.png";
     const dinguslogo = document.getElementById("dinguslogo");
     dinguslogo.addEventListener("click", () => {
         const win = window.open("https://www.dingus.es/en/", "_blank");
+        win.focus();
+    });
+    const strategieslogo = document.getElementById("strategieslogo");
+    strategieslogo.addEventListener("click", () => {
+        const win = window.open("https://www.innovation.es/", "_blank");
         win.focus();
     });
 </script>
